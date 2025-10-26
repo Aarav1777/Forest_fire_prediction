@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🔥 Forest Fire Prediction</title>
+  <style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 40px 50px;
+    width: 85%;
+    max-width: 950px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+
+  h2 {
+    color: #00ffcc;
+    text-shadow: 0 0 8px rgba(0, 255, 204, 0.8);
+    margin-bottom: 30px;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px 25px; /* Increased row & column gap */
+    justify-items: center;
+    margin-bottom: 20px;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-align: center;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+
+  input::placeholder {
+    color: #ddd;
+  }
+
+  input:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+  }
+
+  button {
+    grid-column: 1 / -1;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background-color: #00ffcc;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+  }
+
+  button:hover {
+    background-color: #00cc99;
+    transform: scale(1.03);
+  }
+
+  h3 {
+    margin-top: 25px;
+    color: #ffcc00;
+    font-size: 18px;
+  }
+
+  .footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #ccc;
+  }
+</style>
+
+</head>
+<body>
+  <div class="container">
+    <h2>🔥 Forest Fire Prediction</h2>
+
+    <form action="/predict" method="post">
+      <input type="text" name="temp" placeholder="Temperature" required>
+      <input type="text" name="humidity" placeholder="Humidity" required>
+      <input type="text" name="wind" placeholder="Wind Speed" required>
+      <input type="text" name="rain" placeholder="Rainfall" required>
+      <input type="text" name="area" placeholder="Area">
+      <input type="text" name="region" placeholder="Region">
+
+      <input type="text" name="month" placeholder="Month">
+      <input type="text" name="day" placeholder="Day">
+      <input type="text" name="FFMC" placeholder="FFMC">
+      <input type="text" name="DMC" placeholder="DMC">
+      <input type="text" name="DC" placeholder="DC">
+      <input type="text" name="ISI" placeholder="ISI">
+
+      <button type="submit">Predict Fire Intensity</button>
+    </form>
+
+    <h3>{{ prediction_text }}</h3>
+    <div class="footer">Developed by Aarav | Machine Learning Project</div>
+  </div>
+</body>
+</html>
