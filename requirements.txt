@@ -6,6 +6,6 @@ seaborn
 # tensorflow
 requests
 flask
-
+gunicorn
 
 
