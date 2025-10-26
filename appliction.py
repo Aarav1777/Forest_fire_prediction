@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import pickle
 import numpy as np
 
-app = Flask(__name__)
+appliction = Flask(__name__)
 
 # Load your trained model and scaler
 scaler = pickle.load(open("model/scaler.pkl", "rb"))
