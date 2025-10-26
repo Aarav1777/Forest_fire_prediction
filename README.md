@@ -44,8 +44,27 @@ The dataset contains environmental measurements such as:
 - Python  
 - Pandas, NumPy (Data handling)  
 - Matplotlib, Seaborn (Data visualization)  
-- Scikit-learn (Machine Learning)  
-- Jupyter Notebook (Experimentation & EDA)  
+- Scikit-learn (Machine Learning)
+- Flask (web app devlopment)
+- Jupyter Notebook (Experimentation & EDA)
+  
+## Model Training 
+-The dataset is used to train a predictive model for environmental analysis. The steps include:
+ Data Preprocessing
+ Handle missing values (if any)
+ Convert categorical variables (Area, Region, Month, Day) into numerical form using encoding
+ Normalize or standardize numerical features (Temperature, Humidity, Wind Speed, Rainfall, FFMC, DMC, DC, ISI)
+
+-Feature Selection
+ All environmental parameters are used as features: Temperature, Humidity, Wind Speed, Rainfall, Area, Region, Month, Day, FFMC, DMC, DC, ISI
+-Train-Test Split
+ Split the dataset into training and testing sets (e.g., 80% training, 20% testing)
+-Model Choice
+ A regression/classification model (e.g., Linear Regression, Random Forest, or Decision Tree) is trained to predict the target variable
+-Model Training
+ Fit the model on the training data: model.fit(X_train, y_train)
+-Evaluation
+ Evaluate the model on the test data using metrics like Mean Squared Error (MSE), R² score (for regression), or accuracy (for classification)
 
 ## How to Run
 1. Clone the repository:
