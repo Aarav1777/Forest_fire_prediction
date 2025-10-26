@@ -78,4 +78,7 @@ The dataset contains environmental measurements such as:
    git clone https://github.com/Aarav1777/forest-fire-prediction.git
 =======
    git clone https://github.com/Aarav1777/Forest_fire_prediction.git
+
+   live demo >>> https://forest-fire-prediction-6wdx.onrender.com
+   
 >>>>>>> 2b88daa8e7df26745b67e24b2f25d5e4441f3813
